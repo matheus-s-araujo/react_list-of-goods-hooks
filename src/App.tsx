@@ -33,7 +33,7 @@ function orderedGoods(isReverse: boolean, orderBy: SortType) {
       good1.localeCompare(good2) * comparator,
     [SortType.length]: (good1, good2) =>
       (good1.length - good2.length) * comparator,
-    [SortType.none]: () => 0,
+    [SortType.none]: () => comparator,
   };
   const sortFunction = sortHandlers[orderBy];
 
